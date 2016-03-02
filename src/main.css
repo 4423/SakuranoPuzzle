@@ -1,0 +1,32 @@
+body{
+    font-family:Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+}
+
+#content {
+}
+
+#abstract {
+    text-align: center;
+    margin: 70px 0; 
+}
+#abstract h2 {
+    margin: 20px 0;
+}
+#abstract p {
+    margin: 20px 0;
+}
+
+#sortable-li {
+    margin: 0 auto;
+    list-style: none;
+}
+#sortable-li li {
+    border-width: 0px;
+    margin: 0px;
+    cursor: move;
+    display: inline-block;
+    vertical-align: top;
+}
+#sortable-li li img {
+    width: 250px;
+}
