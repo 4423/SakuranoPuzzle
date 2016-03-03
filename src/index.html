@@ -13,6 +13,11 @@
         <script src="./libs/jquery.min.js"></script>
         <script src="./libs/jquery-ui.min.js"></script>
         
+        <!--Remodal-->
+        <link rel="stylesheet" href="./libs/remodal/remodal.css">
+        <link rel="stylesheet" href="./libs/remodal/remodal-default-theme.css">
+        <script src="./libs/remodal/remodal.js"></script>
+        
         <link rel="stylesheet" href="./main.css" />
         <script type="text/javascript" src="./imglist.js"></script>
         
@@ -24,6 +29,12 @@
                        // 答え合わせ?
                    }
                });
+            });
+        </script>
+        <script type="text/javascript">
+            $(function(){
+                $('.remodal-wrapper').unbind('click.remodal');
+                $('[data-remodal-id=modal]').remodal().open();
             });
         </script>
     </head>
@@ -38,6 +49,14 @@
             <ul id="sortable-li">
                 <!--挿入-->
             </ul>
+        </div>
+        
+        <!--Modal-->
+        <div class="remodal" data-remodal-id="modal">
+            <p>
+                Welcome!!
+            </p>
+            <a data-remodal-action="start" class="remodal-confirm" href="#">START</a>
         </div>
     </body>
 </html>
