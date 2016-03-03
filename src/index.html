@@ -22,10 +22,12 @@
         <script type="text/javascript" src="./imglist.js"></script>
         
         <script type="text/javascript">
+            var count = 0;
             $(function(){
 	           $('#sortable-li').sortable({
                    update: function() {
                        // カウント
+                       count++;
                        // 答え合わせ?
                    }
                });
