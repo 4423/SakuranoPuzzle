@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>sakurano_grid｜4423LabRatory支部</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+         <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">        
+        
+        <!--jQuery-->
+        <link rel="stylesheet" href="./libs/jquery-ui.min.css">
+        <script src="./libs/jquery.min.js"></script>
+        <script src="./libs/jquery-ui.min.js"></script>
+        
+        <!--Remodal-->
+        <link rel="stylesheet" href="./libs/remodal/remodal.css">
+        <link rel="stylesheet" href="./libs/remodal/remodal-default-theme.css">
+        <script src="./libs/remodal/remodal.js"></script>
+        
+        <link rel="stylesheet" href="./main.css" />
+        <script type="text/javascript" src="./imglist.js"></script>
+        
+        <script type="text/javascript">
+            var count = 0;
+            $(function(){
+	           $('#sortable-li').sortable({
+                   update: function() {
+                       // カウント
+                       count++;
+                       // 答え合わせ?
+                   }
+               });
+            });
+        </script>
+        <script type="text/javascript">
+            $(function(){
+                $('.remodal-wrapper').unbind('click.remodal');
+                $('[data-remodal-id=modal]').remodal().open();
+            });
+        </script>
+    </head>
+    <body>
+        <div id="content">
+            <div id="abstract">
+                <h2>サクラノパズル</h2>
+                <p>
+                    その幸福な景色。
+                </p>
+            </div>
+            <ul id="sortable-li">
+                <!--挿入-->
+            </ul>
+        </div>
+        
+        <!--Modal-->
+        <div class="remodal" data-remodal-id="modal">
+            <p>
+                Welcome!!
+            </p>
+            <a data-remodal-action="start" class="remodal-confirm" href="#">START</a>
+        </div>
+    </body>
+</html>
