@@ -39,6 +39,13 @@
                 $('[data-remodal-id=modal]').remodal().open();
             });
         </script>
+        <script type="text/javascript">
+            function gameStart() {
+                appendImg();
+                $('button').slideUp();
+            }
+            
+        </script>
     </head>
     <body>
         <header>
@@ -56,6 +63,9 @@
                     その幸福な景色。
                 </p>
             </div>
+            
+            <button type="button" class="btn btn-start btn-lg" onclick="gameStart();">始める</button>
+            
             <ul id="sortable-li">
                 <!--挿入-->
             </ul>

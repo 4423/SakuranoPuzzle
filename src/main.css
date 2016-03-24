@@ -30,6 +30,7 @@ header span {
 
 #content {
     padding-top: 70px;
+    text-align: center;
 }
 
 #abstract {
@@ -44,8 +45,8 @@ header span {
 }
 
 #sortable-li {
-    margin: 0 auto;
     list-style: none;
+    padding: 50px;
 }
 #sortable-li li {
     border-width: 0px;
@@ -56,4 +57,11 @@ header span {
 }
 #sortable-li li img {
     width: 250px;
+}
+
+.btn-start {
+    color: #fff;
+    background-color: #FDA4B4;
+    border-color: #FDA4B4;
+    border: 0px solid transparent;
 }

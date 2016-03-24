@@ -1,13 +1,13 @@
 // 配列をシャッフルして要素に追加 → フェード表示
 // concatで配列のクローンを作成しているので重いかも
-$(function() {
+function appendImg() {
     shuffle(img_list.concat()).forEach(function(e,i,a){
         var liStr = "<li>" + '<span hidden>' + img_list.indexOf(e) + '</span>' + '<img src="./img/' + e  + '" />' + "</li>";
         var liObj = $(liStr);
         liObj.delay(i*(60)).css({opacity:'0'}).animate({opacity:'1'},900);        
         $("#sortable-li").append(liObj);
     })
-});
+};
 
 
 function shuffle(array) {
