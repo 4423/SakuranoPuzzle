@@ -42,7 +42,7 @@
         <script type="text/javascript">
             function gameStart() {
                 appendImg();
-                $('button').slideUp();
+                $('#start-button').slideUp();
             }
             
         </script>
@@ -64,7 +64,9 @@
                 </p>
             </div>
             
+            <div id="start-button">
             <button type="button" class="btn btn-start btn-lg" onclick="gameStart();">始める</button>
+            </div>
             
             <ul id="sortable-li">
                 <!--挿入-->
