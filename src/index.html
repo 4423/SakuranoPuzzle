@@ -26,23 +26,18 @@
             $(function(){
 	           $('#sortable-li').sortable({
                    update: function() {
-                       // カウント
                        count++;
-                       // 答え合わせ?
                    }
                });
-            });
-        </script>
-        <script type="text/javascript">
-            $(function(){
-                $('.remodal-wrapper').unbind('click.remodal');
-                $('[data-remodal-id=modal]').remodal().open();
             });
         </script>
         <script type="text/javascript">
             function gameStart() {
                 appendImg();
                 $('#start-button').slideUp();
+                setTimeout(function() {
+                    $('#answer-button').slideDown();
+                }, 5000);
                 
                 var t = 0;
                 setInterval(function() {
@@ -52,7 +47,15 @@
                     $("#timer").text(m + ":" + s);
                 }, 1000);
             }
-            
+            function answer() {
+                var isCorrect = true;
+                $('#sortable-li li').each(function(index) {
+                    if ($(this).find('span').text() != index)
+                        isCorrect = false;
+                });
+                $('#answer-result').text(isCorrect ? '正解です！' : '不正解です！');
+                $('[data-remodal-id=modal]').remodal().open();
+            }
         </script>
     </head>
     <body>
@@ -79,14 +82,15 @@
             <ul id="sortable-li">
                 <!--挿入-->
             </ul>
+            
+            <div id="answer-button" style="display: none;">
+                <button type="button" class="btn btn-end btn-lg" onclick="answer();">答え合わせ</button>
+            </div>
         </div>
         
         <!--Modal-->
-        <div class="remodal" data-remodal-id="modal">
-            <p>
-                Welcome!!
-            </p>
-            <a data-remodal-action="start" class="remodal-confirm" href="#">START</a>
+        <div class="remodal" data-remodal-id="modal" data-remodal-options="hashTracking:false">
+            <p id="answer-result"></p>
         </div>
     </body>
 </html>
